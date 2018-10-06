@@ -19,6 +19,19 @@ export default StyleSheet.create({
     fontWeight: '300',
     textAlign: 'center'
   },
+  tacCode: {
+    color: '#fff',
+    fontSize: 60,
+    
+    marginTop: 1,
+    marginBottom: 10,
+    fontWeight: '500',
+    textAlign: 'center'
+  },
+  withdrawalOK:{
+    color:'black',
+    fontSize:30
+  },
   card: {
     backgroundColor: '#fff',
     margin: 4,
@@ -111,4 +124,5 @@ bar1: {
     padding: 20,
     fontSize: 24
   },
+
 })

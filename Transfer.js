@@ -20,6 +20,9 @@ import { Component } from 'react';
 
 
 export default class Add extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
   state = {
     checkedOne: true,
     checkedTwo: false,
@@ -34,7 +37,10 @@ export default class Add extends React.Component {
     valuepayment: '',
   };
 onAdd = () => {
-    this.props.navigation.navigate('Amount');
+    this.props.navigation.navigate('User1');
+  };
+onAddMain = () => {
+    this.props.navigation.navigate('Main');
   };
 
   changeChecked = () => {
@@ -189,9 +195,9 @@ onAdd = () => {
             </View>
           </View>
           <View style={styles.tabBar}>
-            <CardButton name="Cancel" style={styles.cardButton} />
+            <CardButton func = {this.onAddMain} name="Cancel" style={styles.cardButton} />
             <View />
-            <CardButton func = {this.onAdd}name="Confirm" style={styles.cardButton} />
+            <CardButton func = {this.onAdd} name="Confirm" style={styles.cardButton} />
             <View />
           </View>
         </View>

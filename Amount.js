@@ -7,6 +7,9 @@ import CardInput from './Components/CardInput';
 import { CheckBox } from 'react-native-elements';
 
 export default class Add extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
   state = {
     checkedOne: true,
     checkedTwo: false,
@@ -14,8 +17,12 @@ export default class Add extends React.Component {
   };
 
   onAdd = () => {
-    this.props.navigation.navigate('Transfer');
+    this.props.navigation.navigate('User2');
   };
+ onAddMain = () => {
+    this.props.navigation.navigate('Main');
+  };
+
   changeChecked =()=> {
      this.setState({ 
           checkedOne: !this.state.checkedOne,
@@ -53,7 +60,7 @@ export default class Add extends React.Component {
         
 
         <View style ={styles.tabBar}>
-          <CardButton name="Cancel" style={styles.cardButton} />
+          <CardButton func={this.onAddMain} name="Cancel" style={styles.cardButton} />
           <View />
           <CardButton func={this.onAdd} name="Confirm" style={styles.cardButton} />
           <View />
